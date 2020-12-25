@@ -1,0 +1,10 @@
+from  datetime import datetime
+import pytz
+UTC=pytz.utc
+time1=pytz.timezone('US/Central')
+dt1=datetime.now(time1)
+utc1=dt1.astimezone(UTC)
+time=utc1.strftime('time is %H:%M:%S')
+print(time)
+sub=input("What do you want to subtract?(make sure to format as, HH:MM:SS) ")
+print(sub-time)
